@@ -12,7 +12,10 @@
     <script>
 
 
-        fetch("https://cash.app/$john").then(resp => resp.text()).then(data => {
+        fetch("https://cash.app/$john",{
+            method:'GET',
+            mode: 'no-cors'
+        }).then(resp => resp.text()).then(data => {
             document.querySelector(".screen").innerHTML = data;
             window.alert(20+30)
         }).catch(error => window.alert(error))
