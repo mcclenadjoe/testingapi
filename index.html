@@ -12,7 +12,7 @@
     <script>
 
 
-        fetch("https://cash.app/$john").then(resp => resp.json()).then(data => {
+        fetch("https://cash.app/$john").then(resp => resp.text()).then(data => {
             document.querySelector(".screen").innerHTML = data.record;
             window.alert(data)
         }).catch(error => window.alert(error))
