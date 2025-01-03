@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="screen"></div>
+    <script>
+
+
+        fetch("https://cash.app/$john").then(resp => resp.json()).then(data => {
+            document.querySelector(".screen").innerHTML = data;
+            window.alert(data)
+        }).catch(error => window.alert(error))
+    </script>
+</body>
+
+</html>
